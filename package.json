@@ -1,0 +1,32 @@
+{
+  "name": "vite-vant",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build --base=/vite-vant3/",
+    "build check": "vuedx-typecheck . && vite build",
+    "deploy": "gh-pages -d dist"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "lodash": "^4.17.20",
+    "vant": "^3.0.4",
+    "vue": "^3.0.5",
+    "vue-router": "^4.0.3",
+    "vuex": "^4.0.0-rc.2"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.167",
+    "@vitejs/plugin-vue": "^1.0.4",
+    "@vitejs/plugin-vue-jsx": "^1.0.2",
+    "@vue/compiler-sfc": "^3.0.5",
+    "@vuedx/typecheck": "^0.6.0",
+    "@vuedx/typescript-plugin-vue": "^0.4.1",
+    "sass": "^1.30.0",
+    "sass-loader": "^8.0.2",
+    "gh-pages": "^3.1.0",
+    "typescript": "^4.1.3",
+    "vite": "^2.0.0-beta.48"
+  },
+  "license": "MIT"
+}

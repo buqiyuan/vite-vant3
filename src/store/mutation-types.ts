@@ -1,0 +1,1 @@
+export const YZ_OPENID = 'yz_openid' // 用户openid
