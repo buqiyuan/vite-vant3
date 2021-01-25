@@ -1,7 +1,10 @@
 
 ## 移动端布局方案
 
-本项目为移动端vant3.0 + vue3.0 + vite2.0 + ts + REM布局 + Viewport (VW) 布局的实例运用
+移动端vant3.0 + vue3.0 + vite2.0 + ts + REM布局 + Viewport (VW) 布局的实例运用
+
+## 在线预览
+http://buqiyuan.gitee.io/vite-vant3
 
 提供三个布局方案
 
