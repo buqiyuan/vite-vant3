@@ -201,6 +201,11 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
+"@babel/standalone@^7.12.12":
+  version "7.12.12"
+  resolved "https://registry.npm.taobao.org/@babel/standalone/download/@babel/standalone-7.12.12.tgz#f858ab1c76d9c4c23fe0783a0330ad37755f0176"
+  integrity sha1-+FirHHbZxMI/4Hg6AzCtN3VfAXY=
+
 "@babel/template@^7.0.0", "@babel/template@^7.10.4", "@babel/template@^7.12.7":
   version "7.12.7"
   resolved "https://registry.npm.taobao.org/@babel/template/download/@babel/template-7.12.7.tgz?cache=0&sync_timestamp=1605904556456&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40babel%2Ftemplate%2Fdownload%2F%40babel%2Ftemplate-7.12.7.tgz#c817233696018e39fbb6c491d2fb684e05ed43bc"
@@ -436,12 +441,27 @@
   dependencies:
     "@popperjs/core" "^2.5.4"
 
+"@vant/touch-emulator@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.npm.taobao.org/@vant/touch-emulator/download/@vant/touch-emulator-1.2.0.tgz#486300b23e57db9ce9231a04e0a0c621c68692d8"
+  integrity sha1-SGMAsj5X25zpIxoE4KDGIcaGktg=
+
 "@vant/use@^1.0.2":
   version "1.0.2"
   resolved "https://registry.npm.taobao.org/@vant/use/download/@vant/use-1.0.2.tgz#75486aedf3539382baa922c77eeb8a2e2394a948"
   integrity sha1-dUhq7fNTk4K6qSLHfuuKLiOUqUg=
   dependencies:
     "@babel/runtime" "7.x"
+
+"@vitejs/plugin-legacy@^1.2.2":
+  version "1.2.2"
+  resolved "https://registry.npm.taobao.org/@vitejs/plugin-legacy/download/@vitejs/plugin-legacy-1.2.2.tgz?cache=0&sync_timestamp=1611542033650&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40vitejs%2Fplugin-legacy%2Fdownload%2F%40vitejs%2Fplugin-legacy-1.2.2.tgz#65039ca35be1542b5ad612b54641da5a89d7687f"
+  integrity sha1-ZQOco1vhVCta1hK1RkHaWonXaH8=
+  dependencies:
+    "@babel/standalone" "^7.12.12"
+    core-js "^3.8.2"
+    regenerator-runtime "^0.13.7"
+    systemjs "^6.8.3"
 
 "@vitejs/plugin-vue-jsx@^1.0.2":
   version "1.0.2"
@@ -997,6 +1017,11 @@ cookie@^0.4.1:
   version "0.4.1"
   resolved "https://registry.npm.taobao.org/cookie/download/cookie-0.4.1.tgz#afd713fe26ebd21ba95ceb61f9a8116e50a537d1"
   integrity sha1-r9cT/ibr0hupXOth+agRblClN9E=
+
+core-js@^3.8.2:
+  version "3.8.3"
+  resolved "https://registry.npm.taobao.org/core-js/download/core-js-3.8.3.tgz?cache=0&sync_timestamp=1611040749668&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fcore-js%2Fdownload%2Fcore-js-3.8.3.tgz#c21906e1f14f3689f93abcc6e26883550dd92dd0"
+  integrity sha1-whkG4fFPNon5OrzG4miDVQ3ZLdA=
 
 cssesc@^3.0.0:
   version "3.0.0"
@@ -1746,7 +1771,7 @@ readdirp@~3.5.0:
   dependencies:
     picomatch "^2.2.1"
 
-regenerator-runtime@^0.13.4:
+regenerator-runtime@^0.13.4, regenerator-runtime@^0.13.7:
   version "0.13.7"
   resolved "https://registry.npm.taobao.org/regenerator-runtime/download/regenerator-runtime-0.13.7.tgz?cache=0&sync_timestamp=1595456367497&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fregenerator-runtime%2Fdownload%2Fregenerator-runtime-0.13.7.tgz#cac2dacc8a1ea675feaabaeb8ae833898ae46f55"
   integrity sha1-ysLazIoepnX+qrrriugziYrkb1U=
@@ -1921,6 +1946,11 @@ svg-tags@^1.0.0:
   resolved "https://registry.npm.taobao.org/svg-tags/download/svg-tags-1.0.0.tgz#58f71cee3bd519b59d4b2a843b6c7de64ac04764"
   integrity sha1-WPcc7jvVGbWdSyqEO2x95krAR2Q=
 
+systemjs@^6.8.3:
+  version "6.8.3"
+  resolved "https://registry.npm.taobao.org/systemjs/download/systemjs-6.8.3.tgz#67e27f49242e9d81c2b652b204ae54e8bfcc75a3"
+  integrity sha1-Z+J/SSQunYHCtlKyBK5U6L/MdaM=
+
 thenify-all@^1.0.0:
   version "1.6.0"
   resolved "https://registry.npm.taobao.org/thenify-all/download/thenify-all-1.6.0.tgz#1a1918d402d8fc3f98fbf234db0bcc8cc10e9726"
@@ -2007,10 +2037,10 @@ vant@^3.0.4:
     "@vant/popperjs" "^1.0.2"
     "@vant/use" "^1.0.2"
 
-vite@^2.0.0-beta.48:
-  version "2.0.0-beta.48"
-  resolved "https://registry.npm.taobao.org/vite/download/vite-2.0.0-beta.48.tgz#76938af039fedd62177c3305b6195f8d25eb591a"
-  integrity sha1-dpOK8Dn+3WIXfDMFthlfjSXrWRo=
+vite@^2.0.0-beta.49:
+  version "2.0.0-beta.49"
+  resolved "https://registry.npm.taobao.org/vite/download/vite-2.0.0-beta.49.tgz#a4d96107bbd72aedbe91baf0c53345d9ef559b2b"
+  integrity sha1-pNlhB7vXKu2+kbrwxTNF2e9Vmys=
   dependencies:
     esbuild "^0.8.34"
     postcss "^8.2.1"
