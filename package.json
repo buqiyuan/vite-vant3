@@ -8,6 +8,7 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "@vant/touch-emulator": "^1.2.0",
     "axios": "^0.21.1",
     "lodash": "^4.17.20",
     "vant": "^3.0.9",

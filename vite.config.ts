@@ -54,7 +54,8 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
         },
         scss: {
           additionalData: `@import "src/styles/vw-rem/_util.scss";
-                       @import "src/styles/vw-rem/_border.scss";`
+                       @import "src/styles/vw-rem/_border.scss";
+                       @import "src/styles/func.scss";`
         }
       }
     },
