@@ -36,23 +36,6 @@ export default {
       Notify({ type: 'success', message: title })
     }
 
-    fetch("/api/reply/list", {
-      "headers": {
-        "accept": "*/*",
-        "accept-language": "zh-CN,zh;q=0.9,en;q=0.8",
-        "cache-control": "no-cache",
-        "content-type": "application/json",
-        "pragma": "no-cache",
-        "sec-fetch-dest": "empty",
-        "sec-fetch-mode": "cors",
-        "sec-fetch-site": "same-site"
-      },
-      "body": "{\"comment_id\":\"6896808874284744711\",\"item_id\":\"6896748218076364814\",\"item_type\":2,\"cursor\":\"0\",\"limit\":20,\"client_type\":2608}",
-      "method": "POST",
-      "mode": "cors",
-      "credentials": "include"
-    });
-
     return {
       active,
       cateList,

@@ -1,6 +1,8 @@
 <template>
   <router-view #="{Component}">
-      <component :is="Component"/>
+      <keep-alive>
+        <component :is="Component"/>
+      </keep-alive>
   </router-view>
 </template>
 
@@ -13,6 +15,8 @@ export default defineComponent({
 </script>
 
 <style lang="scss">
+@import "./styles/common";
+
 html {
     @include root-font-size();
 }

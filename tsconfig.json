@@ -13,6 +13,7 @@
     "sourceMap": true,
     "esModuleInterop": true,
     "noUnusedLocals": true,
+    "resolveJsonModule": true,
     "noUnusedParameters": true,
     "experimentalDecorators": true,
     "lib": ["dom", "esnext"],

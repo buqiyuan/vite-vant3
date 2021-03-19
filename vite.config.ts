@@ -2,6 +2,7 @@ import type { UserConfig, ConfigEnv } from 'vite'
 import { loadEnv } from 'vite'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import legacy from '@vitejs/plugin-legacy';
+import styleImport from 'vite-plugin-style-import';
 import vue from '@vitejs/plugin-vue'
 import { resolve } from 'path'
 
@@ -32,7 +33,18 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
       vueJsx({
         // options are passed on to @vue/babel-plugin-jsx
       }),
-      ...(VITE_LEGACY && isBuild ? [legacy()] : [])
+      styleImport({
+        libs: [
+          {
+            libraryName: 'vant',
+            esModule: true,
+            resolveStyle: (name) => {
+              return `vant/es/${name}/style/index`;
+            },
+          },
+        ],
+      }),
+      // ...(VITE_LEGACY && isBuild ? [legacy()] : [])
     ],
     css: {
       preprocessorOptions: {
