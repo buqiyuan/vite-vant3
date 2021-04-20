@@ -3,6 +3,7 @@ import { loadEnv } from 'vite'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import legacy from '@vitejs/plugin-legacy';
 import styleImport from 'vite-plugin-style-import';
+import ViteComponents, { VantResolver } from 'vite-plugin-components'
 import vue from '@vitejs/plugin-vue'
 import { resolve } from 'path'
 
@@ -33,7 +34,7 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
       vueJsx({
         // options are passed on to @vue/babel-plugin-jsx
       }),
-      styleImport({
+      styleImport({ // 一、手动的按需导入，需手动import组件
         libs: [
           {
             libraryName: 'vant',
@@ -44,6 +45,11 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
           },
         ],
       }),
+      ViteComponents({ // 二、自动按需导入，无需声明式import引入组件
+        // valid file extensions for components.
+        extensions: ['vue', 'tsx'],
+        customComponentResolvers: [VantResolver()]
+      })
       // ...(VITE_LEGACY && isBuild ? [legacy()] : [])
     ],
     css: {
@@ -72,8 +78,8 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
     },
     optimizeDeps: {
       include: [
-        // 'vant',
-        // '@vant/touch-emulator'
+        'vant',
+        '@vant/touch-emulator'
       ],
     },
     build: {
