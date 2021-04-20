@@ -45,11 +45,11 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
           },
         ],
       }),
-      ViteComponents({ // 二、自动按需导入，无需声明式import引入组件
-        // valid file extensions for components.
-        extensions: ['vue', 'tsx'],
-        customComponentResolvers: [VantResolver()]
-      })
+      // ViteComponents({ // 二、自动按需导入，无需声明式import引入组件
+      //   // valid file extensions for components.
+      //   extensions: ['vue', 'tsx'],
+      //   customComponentResolvers: [VantResolver()]
+      // })
       // ...(VITE_LEGACY && isBuild ? [legacy()] : [])
     ],
     css: {
