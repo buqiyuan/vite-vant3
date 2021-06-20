@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@use 'sass:math';
 
 /* 移动端页面设计稿宽度 */
 $design-width: 750;
@@ -21,7 +22,7 @@ $max-device-width: 540px;
 
 /* html根元素的font-size定义，简单地将页面分为$blocks块，方便计算 */
 @mixin root-font-size() {
-    font-size: 100vw / $blocks;
+    font-size: math.div(100vw, $blocks);
 
     body {
         @include container-min-width();
@@ -29,7 +30,7 @@ $max-device-width: 540px;
 
     /* 最小宽度定义 */
     @media screen and (max-width: $min-device-width) {
-        font-size: $min-device-width / $blocks;
+        font-size:  math.div($min-device-width, $blocks);
     }
 
     /* 最大宽度定义 */
@@ -39,19 +40,19 @@ $max-device-width: 540px;
         }
 
         @media screen and (min-width: $max-device-width) {
-            font-size: $max-device-width / $blocks;
+            font-size: math.div($max-device-width, $blocks);
         }
     }
 }
 
 /* 单位px转化为rem */
 @function px2rem($px) {
-    @return #{$px / $design-width * $blocks}rem;
+    @return #{math.div($px, $design-width) * $blocks}rem;
 }
 
 /* 单位rem转化为px，可用于根据rem单位快速计算原px */
 @function rem2px($rem) {
-    @return #{$rem / $blocks * $design-width}px;
+    @return #{math.div($px, $design-width) * $design-width}px;
 }
 
 /**
